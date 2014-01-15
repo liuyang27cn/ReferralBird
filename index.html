@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Referrals for shopping, travel, and more |ReferralBird</title>
+	<meta content="List and discover membership and qualification referrals of online stores, web-based services, companies or everything else on ReferralBird, the trusted online referral marketplace" name="description">
+	<link rel="canonical" href="http://referralbird.com">
+	<meta content="referrals, shopping, travel, credit card, apartment, save money, sign up” name="keywords">
+	
+	<link rel="stylesheet" media="all" href="rf.css">
+	<link rel="stylesheet" href="jquery-ui-1.10.3.custom.css" />
+
+	<script type="text/javascript" src="jquery-latest.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="rf.js"></script>
+</head>
+<body>
+	<div id="pageHeader">
+		<div id="pageHeaderMain">
+			<a href="index.html"><img id="headerLogo" src="./logo.png"/></a>
+<!-- 
+			<h3 class="title">CHIRPCHIRP</h3>
+ -->
+			<button id="provideButton">LIST YOUR REFERRAL</button>
+		</div>
+	</div>
+	<div id="pageSearch">
+		<div id="mainContent" class="horizontalCentral">
+			<div id="logowrapper">
+				<img id="logo" src="./icon_bird_large.png"/>
+				<div id="shadow"></div>
+			</div>
+			<h1 class="boldFont slogan">Never miss your referral rewards.</h1>
+			<h3>Check out the available referrals for shopping, travel, and more.</h3>
+			<div class="searchBar">
+				<div id="searchBar">
+					<input id="merchantName" placeholder="What are you looking for?"/>
+					<span class="dropDownArrow"></span>
+				</div>
+				<button id="submitButton" title="search"></button>
+			</div>
+		</div>
+		
+		<ul id="categories"></ul>
+		<div id="upArrow" class="arrow-up"></div>
+	</div>
+<!-- 	<div id="dropDownOly"></div> -->
+		
+	<div id="referrals" class="grid"></div>
+	
+
+	<div id="pageFooter">
+		<ul>
+		<li><a href="about.html">About</a></li>		
+		<li><a href="private.html">Private Policy</a></li>
+		<li><a href="terms.html">Terms of Use</a></li>
+		<li><a href="contact.html">Contact us</a></li>
+		<li>© 2014 ReferralBird.</li>
+		</ul>
+	</div>
+	
+	<div id="oly" class="central"></div>
+	<div id="olyBack"></div>	
+	
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-47156407-1', 'referralbird.com');
+	  ga('send', 'pageview');
+
+	</script>
+
+</body>
+</html>
