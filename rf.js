@@ -205,7 +205,7 @@ var RF = function () {
 					}
 				}else{
 					$.ajax({
-						url: "FindReferralProc?mName=" + $("#merchantName").data("sName"),
+						url: "FindReferralProc?mName=" + that.currentRef.mName,
 						type: "GET",
 						dataType: "json",
 						success: function(data) {							
@@ -481,6 +481,7 @@ var RF = function () {
 	  
 	 _setRequestData : function(name){
 			$("#merchantName").data("sName", name);	
+			this.currentRef.mName = name;
 	}
 };
 
