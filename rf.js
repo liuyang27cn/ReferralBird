@@ -170,18 +170,21 @@ var RF = function () {
 			});
 			
 			$("body").on("click", "#provideRefBtn", function(evt){
-				var name = that._checkMName($("#name"));
-				var emailAddress = that._checkEmail($("#email"));
-				var mName = that._checkMName($("#mName"));
-				var refLink = that._checkMName($("#referDetial"));
-				var benefit = that._checkMName($("#benefit"));
+				var name = that._checkMName($("#name"))
+					,emailAddress = that._checkEmail($("#email"))
+					,mName = that._checkMName($("#mName"))
+					,refLink = that._checkMName($("#referDetial"))
+					,benefit = that._checkMName($("#benefit"))
+					,category = that._checkMName($("#category"))
+					;
 				
-				if(name != "" && emailAddress != "" && mName != "" && refLink != "" && benefit != ""){
+				if(name != "" && emailAddress != "" && mName != "" && refLink != "" && benefit != "" && category != ""){
 					that.currentRef.name = name;
 					that.currentRef.emailAddress = emailAddress;
 					that.currentRef.mName = mName;
 					that.currentRef.refLink = refLink;
 					that.currentRef.benefit = benefit;
+					that.currentRef.category = category;
 					
 					provideReferal();
 				}
@@ -266,7 +269,7 @@ var RF = function () {
 					$("#oly").show();
 				}else{	
 					$.ajax({
-						url: "InRefProc?mName=" + that.currentRef.mName + "&name=" + that.currentRef.name + "&email=" + that.currentRef.emailAddress + "&link=" + that.currentRef.refLink + "&benefit=" + that.currentRef.benefit,
+						url: "InRefProc?mName=" + that.currentRef.mName + "&name=" + that.currentRef.name + "&email=" + that.currentRef.emailAddress + "&link=" + that.currentRef.refLink + "&benefit=" + that.currentRef.benefit + "&category=" + that.currentRef.category,
 						type: "GET",
 						dataType: "json",
 						success: function(data) {							
@@ -332,6 +335,9 @@ var RF = function () {
 							'</div>' +
 							'<div class="center">' + 
 								'<input id="benefit" placeholder="What are the benefits?"/>'+
+								'<input id="category" placeholder="What is the category?"/>'+
+							'</div>' +
+							'<div class="center">' + 
 								'<button id="provideRefBtn">Send application</button>'+
 							'</div>' +
 						'</div>';

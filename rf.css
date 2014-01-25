@@ -285,7 +285,7 @@ input#uFmName, input#email{
 	font-size: 1em;
 }
 
-.center input#name, .center input#email, .center input#mName, .center input#referDetial, .center input#benefit, #provideRefBtn{
+.center input#name, .center input#email, .center input#mName, .center input#referDetial, .center input#benefit, .center input#category, #provideRefBtn{
 	width: 200px;	
 	height: 28px;
 	padding: 0 5px;
@@ -298,12 +298,12 @@ input#uFmName, input#email{
 	float: left;
 }
 
-.center input#email, .center input#referDetial, #provideRefBtn{
+.center input#email, .center input#referDetial,  .center input#category, #provideRefBtn{
 	float: right;
 }
 
 #provideRefBtn{
-	width: 212px;
+	width: 100%;
 	height: 30px;
 	background: rgb(254, 229, 0);
 	border: 1px solid rgb(237, 216, 4);
