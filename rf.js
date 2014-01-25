@@ -95,10 +95,23 @@ var RF = function () {
 					$("#olyBack").show();
 					$("#oly").empty();
 					$("#oly").append(getCanProvideRefTemp());
-					$("#oly").show();				
+					$("#oly").show();	
+					
+					$("#category").autocomplete({
+				      source: that.allMerchants.categoryOptions,
+				      minLength: 0,
+				      open: function(){
+        				$(this).autocomplete('widget').addClass('olyIndex');
+        				return false;
+    				  }
+					});
+				
+					$("#category").click(function(){
+						$("#category").autocomplete( "search", "" );
+					});			
 				}
 			);
-
+			
 			$("#olyBack").on("click", function(evt){
 				that._closeLyr();
 			});
@@ -378,6 +391,7 @@ var RF = function () {
 	  _saveAllMerchants : function(data){
 		  this.allMerchants = {};
 		  this.allMerchants.categoryList = [];
+		  this.allMerchants.categoryOptions = [];
 		  /*
 		  for(var i = 0; i < data.length; i++){
 			  this.allMerchants[data[i].name] = data[i].reward;
@@ -392,9 +406,11 @@ var RF = function () {
 // 			    	// If second entry with this name
 // 			    } else 
 				if (typeof this.allMerchants[category] === "undefined") {
-			      var arr = [data[i] ];
+			      var arr = [data[i]];
 				  this.allMerchants[category] = arr;
 				  this.allMerchants.categoryList.push(category);
+				  
+			      this.allMerchants.categoryOptions.push({"name": category, "value": category});
 			    	// If third or later entry with this name
 			    } else {
 			      this.allMerchants[category].push(data[i]);
@@ -492,7 +508,6 @@ var RF = function () {
 };
 
 $( document ).ready(function() {
-	
 
 	var rf = new RF();
 	/*$(".dropDownArrow").on("click", function(evt){

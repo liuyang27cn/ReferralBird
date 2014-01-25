@@ -310,7 +310,7 @@ input#uFmName, input#email{
 }
 
 #olyMain .center{
-	width: 450px;
+	width: 430px;
 	height: 30px;
 	margin: 5px auto;
 }
@@ -360,6 +360,10 @@ input#uFmName, input#email{
 	padding: 15px;
 	background-color: white;
 	border: 1px solid rgb(111,193,170);
+}
+
+.ui-autocomplete.ui-front.ui-menu.olyIndex{
+	z-index: 999;
 }
 
 #oly.sent{
