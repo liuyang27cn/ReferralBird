@@ -117,6 +117,22 @@ var RF = function () {
 				that._closeLyr();
 			});
 			
+						
+			$("body").on("click", "input#mName", function(){
+				$("input#mName").autocomplete({
+						  source: that.origAllMerchants,
+						  minLength: 0,
+						  open: function(){
+							$(this).autocomplete('widget').addClass('olyIndex');
+							return false;
+						  }
+				});
+				
+				$("input#mName").autocomplete( "search", "" );
+			});
+				
+				
+			
 			$("body").on("click", "#getRefBtn", function(evt){
 				var emailAddress = that._checkEmail($("#email"));
 				if(emailAddress != ""){
@@ -203,6 +219,7 @@ var RF = function () {
 					provideReferal();
 				}
 			});
+
 			
 			var getReferal = function(){
 				$("#olyBack").show();
@@ -390,6 +407,7 @@ var RF = function () {
 	  },
 	  
 	  _saveAllMerchants : function(data){
+	  	  this.origAllMerchants = data;
 		  this.allMerchants = {};
 		  this.allMerchants.categoryList = [];
 		  this.allMerchants.categoryOptions = [];
