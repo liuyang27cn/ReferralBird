@@ -124,6 +124,7 @@ var RF = function () {
 						  minLength: 0,
 						  open: function(){
 							$(this).autocomplete('widget').addClass('olyIndex');
+							$(this).autocomplete('widget').css('position', 'fixed');
 							return false;
 						  }
 				});

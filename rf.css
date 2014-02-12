@@ -362,6 +362,12 @@ input#uFmName, input#email{
 	border: 1px solid rgb(111,193,170);
 }
 
+.ui-autocomplete {
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .ui-autocomplete.ui-front.ui-menu.olyIndex{
 	z-index: 999;
 }
